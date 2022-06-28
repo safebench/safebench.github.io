@@ -165,26 +165,26 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
             <td><center>Crossing Negotiation</center></td>
         </tr>
     </table>
-    <p class="doublealign">
+    <!-- <p class="doublealign">
       More videos will be available soon.
-    </p>
-    <!-- <div id="leaderboard" class="container button-list">
+    </p> -->
+    <div id="leaderboard" class="container button-list">
       <div class="heading">
         <u>
-          Available Scenarios
+          Videos
         </u>
       </div>
       <div style="display: flex">
         <label>Scenario: 
-          <select id="scenario" style="width:150px; margin: 10px">
-            <option value="scenario_1">1</option>
-            <option value="scenario_2">2</option>
-            <option value="scenario_3">3</option>
-            <option value="scenario_4">4</option>
-            <option value="scenario_5">5</option>
-            <option value="scenario_6">6</option>
-            <option value="scenario_7">7</option>
-            <option value="scenario_8">8</option>
+          <select id="scenario" style="width:200px; margin: 10px">
+            <option value="scenario_1">Straight Obstacle</option>
+            <option value="scenario_2">Turning Obstacle</option>
+            <option value="scenario_3">Lane Changing</option>
+            <option value="scenario_4">Vehicle Passing</option>
+            <option value="scenario_5">Red-light Running</option>
+            <option value="scenario_6">Unprotected Left-turn</option>
+            <option value="scenario_7">Right-turn</option>
+            <option value="scenario_8">Crossing Negotiation</option>
           </select>
         </label>
 
@@ -198,6 +198,8 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
             <option value="route_6">6</option>
             <option value="route_7">7</option>
             <option value="route_8">8</option>
+            <option value="route_9">9</option>
+            <option value="route_10">10</option>
           </select>
         </label>
         <label>Generation algorithm: 
@@ -208,14 +210,6 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
             <option value="generation_AT">AT</option>
           </select>
         </label>
-        <label>Agent: 
-          <select id="agent" style="width:150px; margin: 10px">
-            <option value="agent_4_algo">4-algo</option>
-            <option value="agent_4_input">4-input</option>
-            <option value="agent_16_agents">16-agents</option>
-          </select>
-        </label>
-
         <button type="button" class="button" onclick="choice()" style="width:150px; margin: 10px; height: 40px;">Evaluate!</button>
       </div>
     </div>
@@ -223,330 +217,3175 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
 
     <div id="leaderboard-CartPole" class="container button-list">
       <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
         <u>
-          CartPole-v0
+          Straight Obstacle
+        </u>
+      </div>
+
+      <section>
+        <div class="heading_second" id="scenario_1_route_1_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_0_lc_9.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_1_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_0_advsim_809.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_1_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_0_carla_challenge_1609.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_1_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_0_advtraj_2349.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_2_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_1_lc_19.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_2_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_1_advsim_819.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_2_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_1_carla_challenge_1619.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_2_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_1_advtraj_2359.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_3_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_2_lc_29.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_3_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_2_advsim_829.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_3_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_2_carla_challenge_1629.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_3_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_2_advtraj_2369.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_4_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_3_lc_39.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_4_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_3_advsim_839.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_4_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_3_carla_challenge_1639.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_4_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_3_advtraj_2379.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_5_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_4_lc_49.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_5_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_4_advsim_849.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_5_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_4_carla_challenge_1649.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_5_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_4_advtraj_2389.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_6_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_5_lc_59.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_6_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_5_advsim_859.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_6_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_5_carla_challenge_1659.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_6_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_5_advtraj_2399.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_7_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_6_lc_69.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_7_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_6_advsim_869.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_7_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_6_carla_challenge_1669.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_7_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_6_advtraj_2409.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_8_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_7_lc_79.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_8_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_7_advsim_879.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_8_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_7_carla_challenge_1679.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_8_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_7_advtraj_2419.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_9_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_8_lc_89.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_9_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_8_advsim_889.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_9_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_8_carla_challenge_1689.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_9_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_8_advtraj_2429.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_1_route_10_generation_LC_heading">
+          <u>
+            Straight Obstacle, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_9_lc_99.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_10_generation_AS_heading">
+          <u>
+            Straight Obstacle, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_9_advsim_899.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_10_generation_CC_heading">
+          <u>
+            Straight Obstacle, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_9_carla_challenge_1699.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_1_route_10_generation_AT_heading">
+          <u>
+            Straight Obstacle, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_1_route_9_advtraj_2439.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Turning Obstacle
         </u>
       </div>
       
+      <section>
+        <div class="heading_second" id="scenario_2_route_1_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_0_lc_109.mp4" type="video/mp4" />
+        </video>
 
+        <div class="heading_second" id="scenario_2_route_1_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_0_advsim_909.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="route_1">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard: CartPole-v0 (LoAct)
-        </u>
-      </div>
+        <div class="heading_second" id="scenario_2_route_1_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_0_carla_challenge_1709.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certiﬁcation for per-state action in terms of certiﬁed radius r at all time steps. Each column corresponds to one smoothing variance &sigma; and each row corresponds to one RL algorithm. For each figure, the x-axis is time step <i>t</i>, and the y-axis is the certified radius <i>r<sub>t</sub></i>. The shaded area represents the standard deviation. The benign performance of locally smoothed policy under different smoothing variance &sigma; can be found <a href="https://crop-leaderboard.github.io/CartPole-v0/Interactive_LoAct_benign/Interactive_LoAct_benign.html">here</a>.
-        </p>
-      </div>
+        <div class="heading_second" id="scenario_2_route_1_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_0_advtraj_2449.mp4" type="video/mp4" />
+        </video>
+      </section>
 
-      <div id="CartPole-v0_LoAct"></div>
-    </section>
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_2_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_1_lc_119.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="route_2">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard: CartPole-v0 (GRe-mean)
-        </u>
-      </div>
+        <div class="heading_second" id="scenario_2_route_2_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_1_advsim_919.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>expection bound</i> <i><u>J<sub>E</sub></u></i>. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
+        <div class="heading_second" id="scenario_2_route_2_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_1_carla_challenge_1719.mp4" type="video/mp4" />
+        </video>
 
-      <div id="CartPole-v0_GRe-mean"></div>
-    </section>
+        <div class="heading_second" id="scenario_2_route_2_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_1_advtraj_2459.mp4" type="video/mp4" />
+        </video>
+      </section>
 
-    <section>
-      <div class="heading_second" id="CartPole-v0_GRe-median_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard: CartPole-v0 (GRe-median)
-        </u>
-      </div>
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_3_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_2_lc_129.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>percentile bound</i> <i><u>J<sub>P</sub> (p = 50%)</u></i>. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
+        <div class="heading_second" id="scenario_2_route_3_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_2_advsim_929.mp4" type="video/mp4" />
+        </video>
 
-      <div id="CartPole-v0_GRe-median"></div>
-    </section>
+        <div class="heading_second" id="scenario_2_route_3_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_2_carla_challenge_1729.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="CartPole-v0_LoRe_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard: CartPole-v0 (LoRe)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>absolute lower bound bound</i> <i><u>J</sub></u></i>. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="CartPole-v0_LoRe"></div>
-    </section>
-
-    <div id="leaderboard-Pong" class="container button-list">
-      <div class="heading">
-        <u>
-          <div style="opacity:0;">1<br>1<br>1<br>1</div>
-          PongNoFrameskip-v4
-        </u>
-      </div>
-    </div>
-
-    <section>
-      <div class="heading_second" id="PongNoFrameskip-v4_LoAct_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          PongNoFrameskip-v4 (LoAct)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certiﬁcation for per-state action in terms of certiﬁed radius r at time steps = 500. Each column corresponds to one smoothing variance &sigma; and each row corresponds to one RL algorithm. For each figure, the x-axis is time step <i>t</i>, and the y-axis is the certified radius <i>r<sub>t</sub></i>. The shaded area represents the standard deviation. The shaded area represents the standard deviation. The benign performance of locally smoothed policy under different smoothing variance &sigma; can be found <a href="https://crop-leaderboard.github.io/PongNoFrameskip-v4/Interactive_LoAct_benign/Interactive_LoAct_benign.html">here</a>.
-        </p>
-      </div>
-
-      <div id="PongNoFrameskip-v4_LoAct"></div>
-    </section>
-
-    <section>
-      <div class="heading_second" id="PongNoFrameskip-v4_GRe-mean_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          PongNoFrameskip-v4 (GRe-mean)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>expection bound</i> <i><u>J<sub>E</sub></u></i> at time steps = 500. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="PongNoFrameskip-v4_GRe-mean"></div>
-    </section>
-
-     <section>
-      <div class="heading_second" id="PongNoFrameskip-v4_GRe-median_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          PongNoFrameskip-v4 (GRe-median)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>percentile bound</i> <i><u>J<sub>P</sub> (p = 50%)</u></i> at time steps = 500. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="PongNoFrameskip-v4_GRe-median"></div>
-    </section>
-
-    <section>
-      <div class="heading_second" id="PongNoFrameskip-v4_LoRe_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          PongNoFrameskip-v4 (LoRe)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>absolute lower bound bound</i> <i><u>J</sub></u></i> at time steps = 200. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="PongNoFrameskip-v4_LoRe"></div>
-    </section>
-
-    <div id="leaderboard-Freeway" class="container button-list">
-      <div class="heading">
-        <u>
-          <div style="opacity:0;">1<br>1<br>1<br>1</div>
-          FreewayNoFrameskip-v4
-        </u>
-      </div>
-    </div>
-
-    <section>
-      <div class="heading_second" id="FreewayNoFrameskip-v4_LoAct_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          FreewayNoFrameskip-v4 (LoAct)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certiﬁcation for per-state action in terms of certiﬁed radius r at time steps = 500. Each column corresponds to one smoothing variance &sigma; and each row corresponds to one RL algorithm. For each figure, the x-axis is time step <i>t</i>, and the y-axis is the certified radius <i>r<sub>t</sub></i>. The shaded area represents the standard deviation. The benign performance of locally smoothed policy under different smoothing variance &sigma; can be found <a href="https://crop-leaderboard.github.io/FreewayNoFrameskip-v4/Interactive_LoAct_benign/Interactive_LoAct_benign.html">here</a>.
-        </p>
-      </div>
-
-      <div id="FreewayNoFrameskip-v4_LoAct"></div>
-    </section>
-
-    <section>
-      <div class="heading_second" id="FreewayNoFrameskip-v4_GRe-mean_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          FreewayNoFrameskip-v4 (GRe-mean)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>expection bound</i> <i><u>J<sub>E</sub></u></i> at time steps = 500. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="FreewayNoFrameskip-v4_GRe-mean"></div>
-    </section>
-
-    <section>
-      <div class="heading_second" id="FreewayNoFrameskip-v4_GRe-median_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          FreewayNoFrameskip-v4 (GRe-median)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>percentile bound</i> <i><u>J<sub>P</sub> (p = 50%)</u></i> at time steps = 500. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="FreewayNoFrameskip-v4_GRe-median"></div>
-    </section>
-
-    <section>
-      <div class="heading_second" id="FreewayNoFrameskip-v4_LoRe_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          Leaderboard:
-          FreewayNoFrameskip-v4 (LoRe)
-        </u>
-      </div>
-
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>absolute lower bound bound</i> <i><u>J</sub></u></i> at time steps = 200. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="FreewayNoFrameskip-v4_LoRe"></div>
-    </section>
+        <div class="heading_second" id="scenario_2_route_3_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_2_advtraj_2469.mp4" type="video/mp4" />
+        </video>
+      </section>
     
-    <div id="leaderboard-highway" class="container button-list">
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_4_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_3_lc_139.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_4_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_3_advsim_939.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_4_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_3_carla_challenge_1739.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_4_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_3_advtraj_2479.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_5_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_4_lc_149.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_5_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_4_advsim_949.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_5_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_4_carla_challenge_1749.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_5_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_4_advtraj_2489.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_6_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_5_lc_159.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_6_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_5_advsim_959.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_6_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_5_carla_challenge_1759.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_6_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_5_advtraj_2499.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_7_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_6_lc_169.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_7_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_6_advsim_969.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_7_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_6_carla_challenge_1769.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_7_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_6_advtraj_2509.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_8_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_7_lc_179.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_8_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_7_advsim_979.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_8_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_7_carla_challenge_1779.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_8_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_7_advtraj_2519.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_9_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_8_lc_189.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_9_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_8_advsim_989.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_9_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_8_carla_challenge_1789.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_9_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_8_advtraj_2529.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_2_route_10_generation_LC_heading">
+          <u>
+            Turning Obstacle, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_9_lc_199.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_10_generation_AS_heading">
+          <u>
+            Turning Obstacle, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_9_advsim_999.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_10_generation_CC_heading">
+          <u>
+            Turning Obstacle, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_9_carla_challenge_1799.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_2_route_10_generation_AT_heading">
+          <u>
+            Turning Obstacle, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_2_route_9_advtraj_2539.mp4" type="video/mp4" />
+        </video>
+      </section>
+
       <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
         <u>
-          <div style="opacity:0;">1<br>1<br>1<br>1</div>
-          highway-fast-v0
+          Lane Changing
         </u>
       </div>
-    </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_3_route_1_generation_LC_heading">
+          <u>
+            Lane Changing, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_0_lc_209.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="highway-fast-v0_LoAct_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          
-          Leaderboard:
-          highway-fast-v0 (LoAct)
-        </u>
-      </div>
+        <div class="heading_second" id="scenario_3_route_1_generation_AS_heading">
+          <u>
+            Lane Changing, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_0_advsim_1009.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certiﬁcation for per-state action in terms of certiﬁed radius r at time steps = 30. Each column corresponds to one smoothing variance &sigma; and each row corresponds to one RL algorithm. For each figure, the x-axis is time step <i>t</i>, and the y-axis is the certified radius <i>r<sub>t</sub></i>. The shaded area represents the standard deviation. The benign performance of locally smoothed policy under different smoothing variance &sigma; can be found <a href="https://crop-leaderboard.github.io/highway-fast-v0/Interactive_LoAct_benign/Interactive_LoAct_benign.html">here</a>.
-        </p>
-      </div>
+        <div class="heading_second" id="scenario_3_route_1_generation_CC_heading">
+          <u>
+            Lane Changing, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_0_carla_challenge_1808.mp4" type="video/mp4" />
+        </video>
 
-      <div id="highway-fast-v0_LoAct"></div>
-    </section>
+        <div class="heading_second" id="scenario_3_route_1_generation_AT_heading">
+          <u>
+            Lane Changing, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_0_advtraj_2549.mp4" type="video/mp4" />
+        </video>
+      </section>
 
-    <section>
-      <div class="heading_second" id="highway-fast-v0_GRe-mean_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          
-          Leaderboard:
-          highway-fast-v0 (GRe-mean)
-        </u>
-      </div>
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_2_generation_LC_heading">
+          <u>
+            Lane Changing, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_1_lc_219.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>expection bound</i> <i><u>J<sub>E</sub></u></i> at time steps = 30. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
+        <div class="heading_second" id="scenario_3_route_2_generation_AS_heading">
+          <u>
+            Lane Changing, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_1_advsim_1019.mp4" type="video/mp4" />
+        </video>
 
-      <div id="highway-fast-v0_GRe-mean"></div>
-    </section>
+        <div class="heading_second" id="scenario_3_route_2_generation_CC_heading">
+          <u>
+            Lane Changing, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_1_carla_challenge_1817.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="highway-fast-v0_GRe-median_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          
-          Leaderboard:
-          highway-fast-v0 (GRe-median)
-        </u>
-      </div>
+        <div class="heading_second" id="scenario_3_route_2_generation_AT_heading">
+          <u>
+            Lane Changing, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_1_advtraj_2559.mp4" type="video/mp4" />
+        </video>
+      </section>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>percentile bound</i> <i><u>J<sub>P</sub> (p = 50%)</u></i> at time steps = 30. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_3_generation_LC_heading">
+          <u>
+            Lane Changing, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_2_lc_229.mp4" type="video/mp4" />
+        </video>
 
-      <div id="highway-fast-v0_GRe-median"></div>
-    </section>
+        <div class="heading_second" id="scenario_3_route_3_generation_AS_heading">
+          <u>
+            Lane Changing, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_2_advsim_1029.mp4" type="video/mp4" />
+        </video>
 
-    <section>
-      <div class="heading_second" id="highway-fast-v0_LoRe_heading">
-        <u>
-          <div style="opacity:0;">1<br>1</div> 
-          
-          Leaderboard:
-          highway-fast-v0 (LoRe)
-        </u>
-      </div>
+        <div class="heading_second" id="scenario_3_route_3_generation_CC_heading">
+          <u>
+            Lane Changing, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_2_carla_challenge_1826.mp4" type="video/mp4" />
+        </video>
 
-      <div class="overview">
-        <p class="doublealign">
-          Robustness certification as cumulative reward in terms of <i>absolute lower bound bound</i> <i><u>J</sub></u></i> at time steps = 30. Each column corresponds to one smoothing variance. Solid lines represent the certified reward bounds of different methods, and dashed lines show the empirical performance under PGD attack. 
-        </p>
-      </div>
-
-      <div id="highway-fast-v0_LoRe"></div>
-    </section>
-  
-
+        <div class="heading_second" id="scenario_3_route_3_generation_AT_heading">
+          <u>
+            Lane Changing, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_2_advtraj_2569.mp4" type="video/mp4" />
+        </video>
+      </section>
     
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_4_generation_LC_heading">
+          <u>
+            Lane Changing, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_3_lc_239.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_4_generation_AS_heading">
+          <u>
+            Lane Changing, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_3_advsim_1039.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_4_generation_CC_heading">
+          <u>
+            Lane Changing, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_3_carla_challenge_1835.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_4_generation_AT_heading">
+          <u>
+            Lane Changing, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_3_advtraj_2579.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_5_generation_LC_heading">
+          <u>
+            Lane Changing, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_4_lc_249.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_5_generation_AS_heading">
+          <u>
+            Lane Changing, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_4_advsim_1049.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_5_generation_CC_heading">
+          <u>
+            Lane Changing, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_4_carla_challenge_1844.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_5_generation_AT_heading">
+          <u>
+            Lane Changing, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_4_advtraj_2589.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_6_generation_LC_heading">
+          <u>
+            Lane Changing, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_5_lc_259.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_6_generation_AS_heading">
+          <u>
+            Lane Changing, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_5_advsim_1059.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_6_generation_CC_heading">
+          <u>
+            Lane Changing, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_5_carla_challenge_1853.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_6_generation_AT_heading">
+          <u>
+            Lane Changing, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_5_advtraj_2599.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_7_generation_LC_heading">
+          <u>
+            Lane Changing, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_6_lc_269.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_7_generation_AS_heading">
+          <u>
+            Lane Changing, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_6_advsim_1069.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_7_generation_CC_heading">
+          <u>
+            Lane Changing, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_6_carla_challenge_1862.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_7_generation_AT_heading">
+          <u>
+            Lane Changing, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_6_advtraj_2609.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_8_generation_LC_heading">
+          <u>
+            Lane Changing, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_7_lc_279.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_8_generation_AS_heading">
+          <u>
+            Lane Changing, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_7_advsim_1079.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_8_generation_CC_heading">
+          <u>
+            Lane Changing, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_7_carla_challenge_1871.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_8_generation_AT_heading">
+          <u>
+            Lane Changing, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_7_advtraj_2619.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_9_generation_LC_heading">
+          <u>
+            Lane Changing, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_8_lc_289.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_9_generation_AS_heading">
+          <u>
+            Lane Changing, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_8_advsim_1089.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_9_generation_CC_heading">
+          <u>
+            Lane Changing, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_8_carla_challenge_1880.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_9_generation_AT_heading">
+          <u>
+            Lane Changing, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_8_advtraj_2629.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_3_route_10_generation_LC_heading">
+          <u>
+            Lane Changing, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_9_lc_299.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_10_generation_AS_heading">
+          <u>
+            Lane Changing, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_9_advsim_1099.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_10_generation_CC_heading">
+          <u>
+            Lane Changing, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_9_carla_challenge_1889.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_3_route_10_generation_AT_heading">
+          <u>
+            Lane Changing, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_3_route_9_advtraj_2639.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Vehicle Passing
+        </u>
+      </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_4_route_1_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_0_lc_309.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_1_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_0_advsim_1109.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_1_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_0_carla_challenge_1898.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_1_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_0_advtraj_2649.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_2_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_1_lc_319.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_2_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_1_advsim_1119.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_2_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_1_carla_challenge_1907.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_2_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_1_advtraj_2659.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_3_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_2_lc_329.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_3_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_2_advsim_1129.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_3_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_2_carla_challenge_1916.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_3_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_2_advtraj_2669.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_4_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_3_lc_339.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_4_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_3_advsim_1139.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_4_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_3_carla_challenge_1925.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_4_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_3_advtraj_2679.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_5_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_4_lc_349.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_5_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_4_advsim_1149.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_5_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_4_carla_challenge_1934.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_5_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_4_advtraj_2689.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_6_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_5_lc_359.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_6_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_5_advsim_1159.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_6_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_5_carla_challenge_1943.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_6_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_5_advtraj_2699.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_7_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_6_lc_369.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_7_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_6_advsim_1169.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_7_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_6_carla_challenge_1952.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_7_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_6_advtraj_2709.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_8_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_7_lc_379.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_8_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_7_advsim_1179.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_8_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_7_carla_challenge_1961.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_8_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_7_advtraj_2719.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_9_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_8_lc_389.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_9_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_8_advsim_1189.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_9_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_8_carla_challenge_1970.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_9_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_8_advtraj_2729.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_4_route_10_generation_LC_heading">
+          <u>
+            Vehicle Passing, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_9_lc_399.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_10_generation_AS_heading">
+          <u>
+            Vehicle Passing, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_9_advsim_1199.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_10_generation_CC_heading">
+          <u>
+            Vehicle Passing, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_9_carla_challenge_1979.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_4_route_10_generation_AT_heading">
+          <u>
+            Vehicle Passing, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_4_route_9_advtraj_2739.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Red-light Running
+        </u>
+      </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_5_route_1_generation_LC_heading">
+          <u>
+            Red-light Running, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_0_lc_409.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_1_generation_AS_heading">
+          <u>
+            Red-light Running, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_0_advsim_1209.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_1_generation_CC_heading">
+          <u>
+            Red-light Running, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_0_carla_challenge_1988.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_1_generation_AT_heading">
+          <u>
+            Red-light Running, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_0_advtraj_2749.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_2_generation_LC_heading">
+          <u>
+            Red-light Running, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_1_lc_419.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_2_generation_AS_heading">
+          <u>
+            Red-light Running, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_1_advsim_1219.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_2_generation_CC_heading">
+          <u>
+            Red-light Running, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_1_carla_challenge_1997.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_2_generation_AT_heading">
+          <u>
+            Red-light Running, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_1_advtraj_2759.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_3_generation_LC_heading">
+          <u>
+            Red-light Running, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_2_lc_429.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_3_generation_AS_heading">
+          <u>
+            Red-light Running, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_2_advsim_1229.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_3_generation_CC_heading">
+          <u>
+            Red-light Running, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_2_carla_challenge_2006.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_3_generation_AT_heading">
+          <u>
+            Red-light Running, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_2_advtraj_2769.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_4_generation_LC_heading">
+          <u>
+            Red-light Running, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_3_lc_439.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_4_generation_AS_heading">
+          <u>
+            Red-light Running, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_3_advsim_1239.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_4_generation_CC_heading">
+          <u>
+            Red-light Running, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_3_carla_challenge_2015.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_4_generation_AT_heading">
+          <u>
+            Red-light Running, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_3_advtraj_2779.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_5_generation_LC_heading">
+          <u>
+            Red-light Running, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_4_lc_449.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_5_generation_AS_heading">
+          <u>
+            Red-light Running, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_4_advsim_1249.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_5_generation_CC_heading">
+          <u>
+            Red-light Running, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_4_carla_challenge_2024.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_5_generation_AT_heading">
+          <u>
+            Red-light Running, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_4_advtraj_2789.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_6_generation_LC_heading">
+          <u>
+            Red-light Running, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_5_lc_459.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_6_generation_AS_heading">
+          <u>
+            Red-light Running, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_5_advsim_1259.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_6_generation_CC_heading">
+          <u>
+            Red-light Running, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_5_carla_challenge_2033.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_6_generation_AT_heading">
+          <u>
+            Red-light Running, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_5_advtraj_2799.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_7_generation_LC_heading">
+          <u>
+            Red-light Running, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_6_lc_469.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_7_generation_AS_heading">
+          <u>
+            Red-light Running, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_6_advsim_1269.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_7_generation_CC_heading">
+          <u>
+            Red-light Running, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_6_carla_challenge_2042.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_7_generation_AT_heading">
+          <u>
+            Red-light Running, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_6_advtraj_2809.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_8_generation_LC_heading">
+          <u>
+            Red-light Running, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_7_lc_479.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_8_generation_AS_heading">
+          <u>
+            Red-light Running, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_7_advsim_1279.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_8_generation_CC_heading">
+          <u>
+            Red-light Running, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_7_carla_challenge_2051.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_8_generation_AT_heading">
+          <u>
+            Red-light Running, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_7_advtraj_2819.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_9_generation_LC_heading">
+          <u>
+            Red-light Running, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_8_lc_489.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_9_generation_AS_heading">
+          <u>
+            Red-light Running, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_8_advsim_1289.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_9_generation_CC_heading">
+          <u>
+            Red-light Running, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_8_carla_challenge_2060.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_9_generation_AT_heading">
+          <u>
+            Red-light Running, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_8_advtraj_2829.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_5_route_10_generation_LC_heading">
+          <u>
+            Red-light Running, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_9_lc_499.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_10_generation_AS_heading">
+          <u>
+            Red-light Running, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_9_advsim_1299.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_10_generation_CC_heading">
+          <u>
+            Red-light Running, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_9_carla_challenge_2069.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_5_route_10_generation_AT_heading">
+          <u>
+            Red-light Running, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_5_route_9_advtraj_2839.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Unprotected Left-turn
+        </u>
+      </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_6_route_1_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_0_lc_509.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_1_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_0_advsim_1309.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_1_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_0_carla_challenge_2078.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_1_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_0_advtraj_2849.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_2_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_1_lc_519.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_2_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_1_advsim_1319.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_2_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_1_carla_challenge_2087.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_2_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_1_advtraj_2859.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_3_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_2_lc_529.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_3_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_2_advsim_1329.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_3_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_2_carla_challenge_2096.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_3_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_2_advtraj_2869.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_4_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_3_lc_539.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_4_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_3_advsim_1339.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_4_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_3_carla_challenge_2105.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_4_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_3_advtraj_2879.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_5_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_4_lc_549.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_5_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_4_advsim_1349.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_5_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_4_carla_challenge_2114.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_5_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_4_advtraj_2889.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_6_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_5_lc_559.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_6_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_5_advsim_1359.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_6_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_5_carla_challenge_2123.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_6_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_5_advtraj_2899.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_7_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_6_lc_569.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_7_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_6_advsim_1369.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_7_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_6_carla_challenge_2132.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_7_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_6_advtraj_2909.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_8_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_7_lc_579.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_8_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_7_advsim_1379.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_8_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_7_carla_challenge_2141.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_8_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_7_advtraj_2919.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_9_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_8_lc_589.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_9_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_8_advsim_1389.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_9_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_8_carla_challenge_2150.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_9_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_8_advtraj_2929.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_6_route_10_generation_LC_heading">
+          <u>
+            Unprotected Left-turn, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_9_lc_599.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_10_generation_AS_heading">
+          <u>
+            Unprotected Left-turn, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_9_advsim_1399.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_10_generation_CC_heading">
+          <u>
+            Unprotected Left-turn, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_9_carla_challenge_2159.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_6_route_10_generation_AT_heading">
+          <u>
+            Unprotected Left-turn, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_6_route_9_advtraj_2939.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Right-turn
+        </u>
+      </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_7_route_1_generation_LC_heading">
+          <u>
+            Right-turn, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_0_lc_609.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_1_generation_AS_heading">
+          <u>
+            Right-turn, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_0_advsim_1409.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_1_generation_CC_heading">
+          <u>
+            Right-turn, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_0_carla_challenge_2168.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_1_generation_AT_heading">
+          <u>
+            Right-turn, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_0_advtraj_2949.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_2_generation_LC_heading">
+          <u>
+            Right-turn, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_1_lc_619.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_2_generation_AS_heading">
+          <u>
+            Right-turn, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_1_advsim_1419.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_2_generation_CC_heading">
+          <u>
+            Right-turn, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_1_carla_challenge_2177.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_2_generation_AT_heading">
+          <u>
+            Right-turn, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_1_advtraj_2959.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_3_generation_LC_heading">
+          <u>
+            Right-turn, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_2_lc_629.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_3_generation_AS_heading">
+          <u>
+            Right-turn, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_2_advsim_1429.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_3_generation_CC_heading">
+          <u>
+            Right-turn, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_2_carla_challenge_2186.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_3_generation_AT_heading">
+          <u>
+            Right-turn, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_2_advtraj_2969.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_4_generation_LC_heading">
+          <u>
+            Right-turn, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_3_lc_639.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_4_generation_AS_heading">
+          <u>
+            Right-turn, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_3_advsim_1439.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_4_generation_CC_heading">
+          <u>
+            Right-turn, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_3_carla_challenge_2195.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_4_generation_AT_heading">
+          <u>
+            Right-turn, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_3_advtraj_2979.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_5_generation_LC_heading">
+          <u>
+            Right-turn, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_4_lc_649.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_5_generation_AS_heading">
+          <u>
+            Right-turn, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_4_advsim_1449.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_5_generation_CC_heading">
+          <u>
+            Right-turn, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_4_carla_challenge_2204.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_5_generation_AT_heading">
+          <u>
+            Right-turn, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_4_advtraj_2989.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_6_generation_LC_heading">
+          <u>
+            Right-turn, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_5_lc_659.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_6_generation_AS_heading">
+          <u>
+            Right-turn, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_5_advsim_1459.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_6_generation_CC_heading">
+          <u>
+            Right-turn, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_5_carla_challenge_2213.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_6_generation_AT_heading">
+          <u>
+            Right-turn, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_5_advtraj_2999.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_7_generation_LC_heading">
+          <u>
+            Right-turn, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_6_lc_669.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_7_generation_AS_heading">
+          <u>
+            Right-turn, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_6_advsim_1469.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_7_generation_CC_heading">
+          <u>
+            Right-turn, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_6_carla_challenge_2222.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_7_generation_AT_heading">
+          <u>
+            Right-turn, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_6_advtraj_3009.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_8_generation_LC_heading">
+          <u>
+            Right-turn, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_7_lc_679.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_8_generation_AS_heading">
+          <u>
+            Right-turn, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_7_advsim_1479.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_8_generation_CC_heading">
+          <u>
+            Right-turn, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_7_carla_challenge_2231.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_8_generation_AT_heading">
+          <u>
+            Right-turn, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_7_advtraj_3019.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_9_generation_LC_heading">
+          <u>
+            Right-turn, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_8_lc_689.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_9_generation_AS_heading">
+          <u>
+            Right-turn, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_8_advsim_1489.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_9_generation_CC_heading">
+          <u>
+            Right-turn, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_8_carla_challenge_2240.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_9_generation_AT_heading">
+          <u>
+            Right-turn, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_8_advtraj_3029.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_7_route_10_generation_LC_heading">
+          <u>
+            Right-turn, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_9_lc_699.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_10_generation_AS_heading">
+          <u>
+            Right-turn, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_9_advsim_1499.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_10_generation_CC_heading">
+          <u>
+            Right-turn, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_9_carla_challenge_2249.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_7_route_10_generation_AT_heading">
+          <u>
+            Right-turn, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_7_route_9_advtraj_3039.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <div class="heading">
+        <div style="opacity:0;">1<br>1</div> 
+        <u>
+          Crossing Negotiation
+        </u>
+      </div>
+      
+      <section>
+        <div class="heading_second" id="scenario_8_route_1_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 1, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_0_lc_709.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_1_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 1, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_0_advsim_1509.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_1_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 1, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_0_carla_challenge_2258.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_1_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 1, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_0_advtraj_3049.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_2_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 2, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_1_lc_719.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_2_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 2, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_1_advsim_1519.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_2_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 2, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_1_carla_challenge_2267.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_2_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 2, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_1_advtraj_3059.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_3_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 3, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_2_lc_729.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_3_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 3, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_2_advsim_1529.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_3_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 3, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_2_carla_challenge_2276.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_3_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 3, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_2_advtraj_3069.mp4" type="video/mp4" />
+        </video>
+      </section>
+    
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_4_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 4, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_3_lc_739.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_4_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 4, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_3_advsim_1539.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_4_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 4, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_3_carla_challenge_2285.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_4_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 4, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_3_advtraj_3079.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_5_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 5, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_4_lc_749.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_5_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 5, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_4_advsim_1549.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_5_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 5, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_4_carla_challenge_2294.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_5_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 5, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_4_advtraj_3089.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_6_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 6, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_5_lc_759.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_6_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 6, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_5_advsim_1559.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_6_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 6, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_5_carla_challenge_2303.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_6_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 6, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_5_advtraj_3099.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_7_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 7, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_6_lc_769.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_7_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 7, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_6_advsim_1569.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_7_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 7, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_6_carla_challenge_2312.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_7_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 7, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_6_advtraj_3109.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_8_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 8, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_7_lc_779.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_8_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 8, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_7_advsim_1579.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_8_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 8, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_7_carla_challenge_2321.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_8_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 8, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_7_advtraj_3119.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_9_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 9, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_8_lc_789.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_9_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 9, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_8_advsim_1589.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_9_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 9, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_8_carla_challenge_2330.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_9_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 9, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_8_advtraj_3129.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <div style="opacity:0;">1<br>1</div> 
+        <div class="heading_second" id="scenario_8_route_10_generation_LC_heading">
+          <u>
+            Crossing Negotiation, route 10, by LC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_9_lc_799.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_10_generation_AS_heading">
+          <u>
+            Crossing Negotiation, route 10, by AS
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_9_advsim_1599.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_10_generation_CC_heading">
+          <u>
+            Crossing Negotiation, route 10, by CC
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_9_carla_challenge_2339.mp4" type="video/mp4" />
+        </video>
+
+        <div class="heading_second" id="scenario_8_route_10_generation_AT_heading">
+          <u>
+            Crossing Negotiation, route 10, by AT
+          </u>
+        </div>
+        <video width="768" height="256" controls="controls">
+          <source src="videos/scenario_8_route_9_advtraj_3139.mp4" type="video/mp4" />
+        </video>
+      </section>
 
     <div class="vspace30"></div>
 
@@ -554,7 +3393,7 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
 
     <div class="vspace50"></div>
 
-  </div> -->
+  </div> 
 
   <hr class="bottomrule" />
 
@@ -583,9 +3422,10 @@ Please find more details in our paper <a href="https://openreview.net/forum?id=d
   </script>
   <script>
     function choice() {
-      var game = document.getElementById("games").value;
-      var cert_method = document.getElementById("cert-methods").value;
-      window.location.href = "#"+game+"_"+cert_method+"_heading";
+      var scenario = document.getElementById("scenario").value;
+      var route = document.getElementById("route").value;
+      var ga = document.getElementById("generation-algorithm").value;
+      window.location.href = "#"+scenario+"_"+route+"_"+ga+"_heading";
     }
   </script>
   <script>
