@@ -1,13 +1,13 @@
-# Website of CROP-leaderboard: a standardized certified adversarial robustness benchmark of RL algorithms
+# Website of SafeBench: A Benchmarking Platform for Safety Evaluation of Autonomous Vehicles
 
-**Leaderboard website**: [https://crop-leaderboard.github.io](https://crop-leaderboard.github.io)
+**Website**: [https://safebench.github.io/](https://safebench.github.io/)
 
-**Model Zoo**: [https://github.com/RobustBench/robustbench](https://github.com/RobustBench/robustbench)
+**Leaderboard website**: [https://safebench.github.io/leaderboard/index.html](https://safebench.github.io/leaderboard/index.html)
 
-**Paper:** [https://arxiv.org/abs/2106.09292](https://arxiv.org/abs/2106.09292)
+**Paper:** [https://arxiv.org/abs/2206.09682](https://arxiv.org/abs/2206.09682)
 
 
-## Main idea
+<!-- ## Main idea
   
 The goal of **`CROP-leaderboard`** is to systematically track the *real* progress in certified adversarial robustness of RL algorithms. 
 There are already thousands of papers on this topic, but it is still unclear which approaches really work and which only lead to [overestimated robustness](https://arxiv.org/abs/1802.00420).
@@ -21,4 +21,4 @@ harder but do not substantially improve robustness ([Carlini et al., (2019)](htt
 that can present concrete provable guarantees (e.g. [Cohen et al., (2019)](https://arxiv.org/abs/1902.02918)).
 
 ## Contributions
-Contributions both to the website and [model zoo](https://github.com/RobustBench/robustbench) are very welcome, as well as any suggestions for improving the project! We would be happy to hear any feedback on how to make it better and more comprehensive.
+Contributions both to the website and [model zoo](https://github.com/RobustBench/robustbench) are very welcome, as well as any suggestions for improving the project! We would be happy to hear any feedback on how to make it better and more comprehensive. -->
