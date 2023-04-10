@@ -17,7 +17,7 @@ section,
 p,
 header {
   font-size: inherit;
-  line-height: inherit;
+  line-height: 150%;
 }
 .doublealign {
   text-align: justify;
