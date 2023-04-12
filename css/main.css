@@ -331,8 +331,8 @@ section .heading {
 }
 
 .btn:hover {
-  background-color: #a9c4f5;
-  border-color: #a9c4f5;
+  background-color: #2E81FA;
+  border-color: #2E81FA;
   /*color: #E87722;*/
   color: #2E81FA;
 }
