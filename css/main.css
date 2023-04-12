@@ -27,7 +27,7 @@ header {
 a {
   text-decoration: none;
   /*color: #f4720d;*/
-  color: #60b6ab;
+  color: #e731a4;
 }
 
 .container,
@@ -54,7 +54,7 @@ footer {
   background-color: whitesmoke;
   margin-bottom: 30px;
   /*background-image: linear-gradient(to bottom, #f4a460, white);*/
-  background-image: linear-gradient(to bottom, #6082b6, white);
+  background-image: linear-gradient(to bottom, #2E81FA, white);
   top: 0;
   width: 100%;
   z-index: 1;
@@ -91,7 +91,7 @@ footer {
   border: 0;
   height: 20px;
   /*background: #f58025;*/
-  background: #6082b6;
+  background: #2E81FA;
 }
 
 .header-block {
@@ -117,7 +117,7 @@ footer {
   grid-row: 1;
   font-size: 4.5em;
   /*color: #f58025;*/
-  color: #6082b6;
+  color: #2E81FA;
   font-weight: bolder;
   font-variant: small-caps;
   text-align: left;
@@ -274,7 +274,7 @@ section .heading {
   border: 0;
   height: 4px;
   /*background: #e87722;*/
-  background: #6082b6;
+  background: #2E81FA;
 }
 
 .datatable {
@@ -322,7 +322,7 @@ section .heading {
   background-color: gainsboro;
   border-color: gainsboro;
   /*color: #E87722;*/
-  color: #6082b6;
+  color: #2E81FA;
   font-size: 1.2em;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -334,7 +334,7 @@ section .heading {
   background-color: #a9c4f5;
   border-color: #a9c4f5;
   /*color: #E87722;*/
-  color: #6082b6;
+  color: #2E81FA;
 }
 
 .button-list .heading {
@@ -354,13 +354,13 @@ section .heading {
 .button-list .heading u {
   text-decoration: none;
   /*border-bottom: 6px solid #E87722;*/
-  border-bottom: 6px solid #6082b6;
+  border-bottom: 6px solid #2E81FA;
 }
 
 .heading_second u {
   text-decoration: none;
   /*border-bottom: 6px solid #E87722;*/
-  border-bottom: 6px solid #6082b6;
+  border-bottom: 6px solid #2E81FA;
 }
 
 /* Leaderboard table css */
@@ -460,7 +460,7 @@ footer {
 }
 
 .button {
-    background-color: #6082b6;
+    background-color: #2E81FA;
     border: none;
     color: white;
     padding: 15px 32px;
